@@ -13,6 +13,8 @@ import java.time.Duration;
 public class BaseTest {
     public static WebDriver driver = null;
 
+   public static WebDriver driver = null;
+
     @BeforeSuite
     static void setupClass() {
         WebDriverManager.chromedriver().setup();
@@ -30,11 +32,13 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public static void closeBrowser () {
+
+    public static void closeBrowser() {
         driver.quit();
     }
 
-    public static void navigateToPage () {
+    public static void navigateToPage() {
+
         String url = "https://qa.koel.app/";
         driver.get(url);
     }
@@ -55,6 +59,8 @@ public class BaseTest {
         WebElement clickSubmit = driver.findElement(By.cssSelector("button[type='Submit']"));
         clickSubmit.click();
     }
+
+
 
 
 
