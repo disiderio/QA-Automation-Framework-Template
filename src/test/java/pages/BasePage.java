@@ -25,10 +25,14 @@ public class BasePage {
 
     public WebElement findElement(WebElement webElement) {
         return wait.until(ExpectedConditions.visibilityOf(webElement));
+    //public WebElement findElement(By locator) {
+        //return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public void doubleClick (WebElement webElement) {
-        actions.doubleClick(findElement(webElement)).perform();
+       actions.doubleClick(findElement(webElement)).perform();
+      //public void doubleClick (By locator) {
+        //actions.doubleClick(findElement(locator)).perform();
     }
 
 

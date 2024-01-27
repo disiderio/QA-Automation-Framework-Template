@@ -21,6 +21,34 @@ import java.net.URI;
 import java.time.Duration;
 
 public class BaseTest {
+    public static WebDriver driver = null;
+
+   public static WebDriver driver = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
 
     public static WebDriver driver = null;
     public static String url = null;
@@ -47,7 +75,6 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         url = baseURL;
         actions = new Actions(driver);
-
 
         navigateToPage();
     }
