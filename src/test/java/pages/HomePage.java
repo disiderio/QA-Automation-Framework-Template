@@ -12,9 +12,10 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
-    @FindBy(css = "a[href='#!/playlist/72953']")
+  
+    @FindBy(css = "a[href='#!/playlist/74151']")
     WebElement firstPlaylist;
-    // By firstPlaylist = By.cssSelector("a[href='#!/playlist/72953']");
+    // By firstPlaylist = By.cssSelector("a[href='#!/playlist/74151']");
 
     @FindBy(css = "[name='name']")
     WebElement playlistNameField;

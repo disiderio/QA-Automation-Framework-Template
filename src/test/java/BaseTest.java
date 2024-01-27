@@ -65,6 +65,13 @@ public class BaseTest {
     public static Actions actions = null;
     private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
 
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
+    private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
+
     @BeforeSuite
     static void setupClass() {
         WebDriverManager.chromedriver().setup();
@@ -109,6 +116,8 @@ public class BaseTest {
         String gridURL = "http://192.168.1.160:4444";
 
         switch (browser){
+            case "chrome":
+                return driver = new ChromeDriver ();
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 return driver = new FirefoxDriver();
