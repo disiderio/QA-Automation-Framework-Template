@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import java.time.Duration;
 
 public class BaseTest {
+    public static WebDriver driver = null;
 
    public static WebDriver driver = null;
 
@@ -31,11 +32,13 @@ public class BaseTest {
     }
 
     @AfterMethod
+
     public static void closeBrowser() {
         driver.quit();
     }
 
     public static void navigateToPage() {
+
         String url = "https://qa.koel.app/";
         driver.get(url);
     }
@@ -56,6 +59,7 @@ public class BaseTest {
         WebElement clickSubmit = driver.findElement(By.cssSelector("button[type='Submit']"));
         clickSubmit.click();
     }
+
 
 
 
