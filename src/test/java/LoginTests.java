@@ -17,9 +17,7 @@ public class LoginTests extends BaseTest {
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-
-    
-        String url = "https://bbb.testpro.io/";
+        String url = "https://qa.koel.app/";
     
         driver.get(url);
         Assert.assertEquals(driver.getCurrentUrl(), url);
