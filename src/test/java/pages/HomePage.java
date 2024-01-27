@@ -15,10 +15,10 @@ public class HomePage extends BasePage {
   
     @FindBy(css = "a[href='#!/playlist/72953']")
     WebElement firstPlaylist;
-   // By firstPlaylist = By.cssSelector("a[href='#!/playlist/70755']");
+    // By firstPlaylist = By.cssSelector("a[href='#!/playlist/70755']");
 
     @FindBy(css = "[name='name']")
-   WebElement playlistNameField;
+    WebElement playlistNameField;
     //By playlistNameField = By.cssSelector("[name='name']");
 
     @FindBy(css = "div.success.show")
@@ -31,7 +31,7 @@ public class HomePage extends BasePage {
     }
 
     public void enterNewPlaylistName(String newPlaylistName) {
-       // playlistNameField.findElement(null);
+        // playlistNameField.findElement(null);
         findElement(playlistNameField);
         //actions.doubleClick(playlistNameField);
         doubleClick(playlistNameField);
