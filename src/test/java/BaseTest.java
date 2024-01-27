@@ -11,7 +11,12 @@ import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 
+import java.time.Duration;
+
 public class BaseTest {
+    public static WebDriver driver = null;
+
+   public static WebDriver driver = null;
 
     public static WebDriver driver = null;
     public static String url = null;
@@ -22,8 +27,10 @@ public class BaseTest {
     }
 
     @BeforeMethod
+
     @Parameters({"baseURL"})
     public void launchBrowser(String baseURL) {
+
         // Added ChromeOptions argument below to fix websocket error
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -31,6 +38,7 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
+
         url = baseURL;
         navigateToPage();
     }
@@ -45,21 +53,28 @@ public class BaseTest {
     }
 
     public void provideEmail(String email) {
+
         WebElement emailField = driver.findElement(By.cssSelector("input[type='email']"));
         emailField.clear();
         emailField.sendKeys(email);
     }
 
+
     public void providePassword(String password) {
+
         WebElement passwordField = driver.findElement(By.cssSelector("input[type='password']"));
         passwordField.clear();
         passwordField.sendKeys(password);
     }
 
+
     public void clickSubmit() {
+
         WebElement clickSubmit = driver.findElement(By.cssSelector("button[type='Submit']"));
         clickSubmit.click();
     }
+
+
 
 
 
