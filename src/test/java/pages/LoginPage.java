@@ -25,17 +25,24 @@ public class LoginPage extends BasePage {
 
     public void provideEmail(String email) {
         emailField.sendKeys(email);
-    }
+    }//public void provideEmail(String email) {
+        //findElement(emailField).sendKeys(email);
+    //}
     public void providePassword(String password) {
         passwordField.sendKeys(password);
-    }
+    }//public void providePassword(String password) {
+        //findElement(passwordField).sendKeys(password);
+    //}
     public void clickSubmitBtn() {
         submitBtnLocator.click();
+      //public void clickSubmit() {
+        //findElement(submitBtn).click();
     }
     public void login() {
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");
         clickSubmitBtn();
+      //clickSubmit();
     }
 
 

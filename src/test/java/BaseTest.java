@@ -23,6 +23,40 @@ import java.time.Duration;
 import java.util.HashMap;
 
 public class BaseTest {
+    public static WebDriver driver = null;
+
+   public static WebDriver driver = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
+
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
 
     public static WebDriver driver = null;
     public static String url = null;
@@ -45,11 +79,16 @@ public class BaseTest {
 
         //driver = new ChromeDriver(options);
         threadDriver.set(pickBrowser(System.getProperty("browser")));
+              //driver = pickBrowser(System.getProperty("browser"));
         threadDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                  //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         threadDriver.get().manage().window().maximize();
+                  //driver.manage().window().maximize();
         wait = new WebDriverWait(threadDriver.get(), Duration.ofSeconds(10));
+      //wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         url = baseURL;
         actions = new Actions(threadDriver.get());
+      //actions = new Actions(driver);
 
 
         navigateToPage();
@@ -58,6 +97,7 @@ public class BaseTest {
     @AfterMethod
     public void closeBrowser() {
         threadDriver.get().quit();
+                  //driver.quit();
     }
 
     public static WebDriver getDriver() {
@@ -119,6 +159,7 @@ public class BaseTest {
 
     public void navigateToPage() {
         threadDriver.get().get(url);
+                  //driver.get(url);
     }
 
     public void provideEmail(String email) {
