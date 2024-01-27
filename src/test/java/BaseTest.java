@@ -36,6 +36,12 @@ public class BaseTest {
 
     public static Actions actions = null;
 
+    public static WebDriver driver = null;
+    public static String url = null;
+    public static WebDriverWait wait = null;
+
+    public static Actions actions = null;
+
     @BeforeSuite
     static void setupClass() {
         WebDriverManager.chromedriver().setup();
@@ -54,9 +60,11 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
+
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         url = baseURL;
         actions = new Actions(driver);
+
 
 
         navigateToPage();
