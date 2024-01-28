@@ -24,51 +24,8 @@ import java.util.HashMap;
 
 public class BaseTest {
     public static WebDriver driver = null;
-
-   public static WebDriver driver = null;
-
-    public static WebDriver driver = null;
-    public static String url = null;
-
-    public static WebDriver driver = null;
     public static String url = null;
     public static WebDriverWait wait = null;
-
-    public static WebDriver driver = null;
-    public static String url = null;
-    public static WebDriverWait wait = null;
-
-    public static Actions actions = null;
-
-    public static WebDriver driver = null;
-    public static String url = null;
-    public static WebDriverWait wait = null;
-
-    public static Actions actions = null;
-
-    public static WebDriver driver = null;
-    public static String url = null;
-    public static WebDriverWait wait = null;
-
-    public static Actions actions = null;
-
-    public static WebDriver driver = null;
-    public static String url = null;
-    public static WebDriverWait wait = null;
-
-    public static Actions actions = null;
-
-    public static WebDriver driver = null;
-    public static String url = null;
-    public static WebDriverWait wait = null;
-
-    public static Actions actions = null;
-    private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
-
-    public static WebDriver driver = null;
-    public static String url = null;
-    public static WebDriverWait wait = null;
-
     public static Actions actions = null;
     private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
 
